@@ -1,0 +1,39 @@
+﻿/*@media 
+@media screen and(max-width 800px),screen and (resolution:144dpi)*/
+
+body {
+	background-color: lightgreen;
+}
+#container{
+	
+	display:flex;
+}
+aside{
+	flex:25%;
+}
+aside img{
+	float:right;
+}
+article{
+	flex:75%;
+}
+.page{
+background-color:lightgrey;
+	width:80%;
+	margin:auto;
+}
+header{
+	text-align:center;
+}
+footer{
+	text-align:center;
+}
+.Menu{
+	color:indianred;
+}
+.Menu:hover{
+	color:orange;
+}
+.Selected{
+	color:navy;
+}

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            <header>
+        <h1><asp:ContentPlaceHolder ID="Header" runat="server"></asp:ContentPlaceHolder></h1>
+            </header>
+            <nav>
+              <%--  <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" StaticDisplayLevels="2" Orientation="Horizontal" StaticMenuItemStyle-ItemSpacing="2em">
+                    <StaticMenuItemStyle HorizontalPadding="0.5em"  CssClass="Menu" />
+                    
+                    <StaticSelectedStyle CssClass="Selected"/>
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>--%>
+                <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" StaticMenuItemStyle-ItemSpacing="2em">
+                      <StaticMenuItemStyle HorizontalPadding="0.5em"  CssClass="Menu" />  
+                    <StaticSelectedStyle Forecolor="Navy"/>
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Selected="True" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Recipes.aspx" Text="List of recipes" Value="List of recipes"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Favourites.aspx" Text="Favourites" Value="Favourites"></asp:MenuItem>
+                    </Items>
+                 
+                </asp:Menu>
+            </nav>
+    <div id="container">
+        <article>   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </article>
+        <aside><asp:ContentPlaceHolder ID="asideImage" runat="server"></asp:ContentPlaceHolder>
+     </aside>
+    </div>
+            <footer>&copy; Sivuyisiwe Molose</footer>
+        </div>
+    </form>
+</body>
+</html>
